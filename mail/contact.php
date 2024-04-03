@@ -4,7 +4,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 $name = $email = $message = $subject = "";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $myDate = date('d/m/Y H:i:s');
 
