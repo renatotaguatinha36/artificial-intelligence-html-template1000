@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-##################################### RECEBER DADOS DO FORMULÁRIO ################################################ 
+##################################################### RECEBER DADOS DO FORMULÁRIO ################################################ 
 
 if (isset($_POST['name']) && $_POST['name'] != null) {
   $name = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
