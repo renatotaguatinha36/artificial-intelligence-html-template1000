@@ -16,7 +16,7 @@ try {
   $stmt->bindParam(':email', $email);
 
   // insert a row
-  $firstname = "John";
+  $firstname = $_POST['email'];
   $lastname = "Doe";
   $email = "john@example.com";
   $stmt->execute();

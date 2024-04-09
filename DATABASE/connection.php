@@ -11,6 +11,24 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+
+##################################### RECEBER DADOS DO FORMULÁRIO ################################################ 
+
+if (isset($_POST['name']) && $_POST['name'] != null) {
+  $name = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
+  }
+  if (isset($_POST['email']) && $_POST['email'] != null) {
+  $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+  }
+  if (isset($_POST['message']) && $_POST['message'] != null) {
+  $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS);
+  }
+  if (isset($_POST['subject']) && $_POST['subject'] != null) {
+  $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
+  }
+
+  
+
 $sql = "INSERT INTO MyGuests (firstname, lastname, email)
 VALUES ('John', 'Doe', 'john@example.com')";
 
